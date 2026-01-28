@@ -1261,6 +1261,13 @@ footer {
         transform: translateX(-50%);
         white-space: nowrap;
         margin: 0;
+        font-size: 2.2rem;
+        /* Increased from 1.8rem */
+    }
+
+    .navbar {
+        padding: 1.5rem 0;
+        /* Increased from 1rem */
     }
 
     .menu-toggle {
@@ -1370,8 +1377,14 @@ footer {
     }
 
     .btn {
-        padding: 0.5rem 0.8rem;
-        font-size: 0.8rem;
+        padding: 0.8rem 1.5rem;
+        /* Increased size */
+        font-size: 1rem;
+        /* Increased size */
+        width: 100%;
+        /* Ensure full width for better tap targets on mobile */
+        max-width: 300px;
+        margin: 0.5rem auto;
     }
 
     .scroll-down {

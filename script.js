@@ -166,12 +166,52 @@ if (currentIndex === -1) currentIndex = 0; // Default to home if not found
 // Keyboard Navigation
 document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight') {
-        if (currentIndex < pages.length - 1) window.location.href = pages[currentIndex + 1];
+        if (currentIndex < pages.length - 1) navigateToPage(pages[currentIndex + 1]);
     }
     if (e.key === 'ArrowLeft') {
-        if (currentIndex > 0) window.location.href = pages[currentIndex - 1];
+        if (currentIndex > 0) navigateToPage(pages[currentIndex - 1]);
     }
 });
+
+// --- Swipe Navigation Logic ---
+let touchStartX = 0;
+let touchEndX = 0;
+const swipeThreshold = 100; // Minimum distance for a swipe
+
+document.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+}, { passive: true });
+
+document.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+}, { passive: true });
+
+const handleSwipe = () => {
+    const swipeDistance = touchEndX - touchStartX;
+
+    // Swipe Right (Previous Page)
+    if (swipeDistance > swipeThreshold) {
+        if (currentIndex > 0) navigateToPage(pages[currentIndex - 1]);
+    }
+    // Swipe Left (Next Page)
+    if (swipeDistance < -swipeThreshold) {
+        if (currentIndex < pages.length - 1) navigateToPage(pages[currentIndex + 1]);
+    }
+};
+
+const navigateToPage = (href) => {
+    const overlay = document.querySelector('.page-transition-overlay');
+    if (overlay) {
+        overlay.classList.remove('page-ready');
+        overlay.classList.add('page-exit');
+        setTimeout(() => {
+            window.location.href = href;
+        }, 800);
+    } else {
+        window.location.href = href;
+    }
+};
 
 
 // --- Project Filtering ---
