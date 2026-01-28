@@ -1,0 +1,78 @@
+/* CSS for Horizontal Swipe Layout */
+
+/* Ensure body doesn't scroll vertically in the traditional way */
+body {
+    overflow: hidden;
+    /* Hide default scrollbar */
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Outer wrapper to clip overflow */
+.outer-wrapper {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+/* The distinct container that slides horizontally */
+#page-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 800vw;
+    /* 8 sections: Home, About, Skills, Projects, Experience, Services, Testimonials, Contact */
+    height: 100vh;
+    transition: transform 0.6s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    /* Smooth ease */
+}
+
+/* Each section becomes a "Page" */
+.hero,
+.section {
+    min-width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    /* Allow scrolling content inside the page */
+    overflow-x: hidden;
+    position: relative;
+    padding-top: 100px;
+    /* Space for Navbar */
+    padding-bottom: 50px;
+    flex-shrink: 0;
+    /* Prevent squishing */
+}
+
+/* Adjust section spacing since we are no longer stacking them */
+.section {
+    padding: 100px 0 50px 0;
+    margin: 0;
+}
+
+/* Scrollbar Styling for inner pages */
+.hero::-webkit-scrollbar,
+.section::-webkit-scrollbar {
+    width: 8px;
+}
+
+.hero::-webkit-scrollbar-track,
+.section::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.hero::-webkit-scrollbar-thumb,
+.section::-webkit-scrollbar-thumb {
+    background: var(--glass-border);
+    border-radius: 4px;
+}
+
+.hero::-webkit-scrollbar-thumb:hover,
+.section::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+/* Adjust Navbar to be always on top */
+.navbar {
+    width: 100vw;
+}

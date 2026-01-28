@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Fazal - Web Developer</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Fazal Dev</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="skills.html" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link nav-btn">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container main-wrapper">
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-header center">
+                    <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+                    <p class="section-subtitle">50+ projects showcasing my expertise</p>
+                </div>
+
+                <div class="filter-btns">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web-app">Web Apps</button>
+                    <button class="filter-btn" data-filter="landing-page">Landing Pages</button>
+                    <button class="filter-btn" data-filter="dashboard">Dashboards</button>
+                    <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card show-on-scroll" data-category="ecommerce">
+                        <div class="project-img">
+                            <img src="assets/shophub-ecommerce.png" alt="E-Commerce Platform" class="img-placeholder"
+                                style="object-fit: contain; background: #f0f9ff;">
+                        </div>
+                        <div class="project-info">
+                            <h3>ShopHub E-Commerce</h3>
+                            <p>Full-stack online store with cart, checkout, and Stripe payment integration.</p>
+                            <div class="tags">
+                                <span>React</span><span>Node.js</span><span>MongoDB</span><span>Stripe</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card show-on-scroll" data-category="dashboard">
+                        <div class="project-img">
+                            <img src="assets/dataviz-analytics.jpg" alt="Analytics Dashboard" class="img-placeholder"
+                                style="object-fit: contain; background: #0f172a;">
+                        </div>
+                        <div class="project-info">
+                            <h3>DataViz Analytics</h3>
+                            <p>Real-time analytics dashboard with interactive charts and KPIs.</p>
+                            <div class="tags"><span>React</span><span>D3.js</span><span>Firebase</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card show-on-scroll" data-category="landing-page">
+                        <div class="project-img">
+                            <img src="assets/cloudsync-saas.jpg" alt="SaaS Landing" class="img-placeholder"
+                                style="object-fit: contain; background: #0f172a;">
+                        </div>
+                        <div class="project-info">
+                            <h3>CloudSync SaaS Landing</h3>
+                            <p>High-conversion landing page with smooth animations and lead capture.</p>
+                            <div class="tags"><span>Next.js</span><span>Tailwind</span><span>Framer Motion</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card show-on-scroll" data-category="web-app">
+                        <div class="project-img">
+                            <img src="assets/connecthub-social.jpg" alt="Social Media App" class="img-placeholder"
+                                style="object-fit: contain; background: #0f172a;">
+                        </div>
+                        <div class="project-info">
+                            <h3>ConnectHub Social</h3>
+                            <p>Social networking platform with real-time messaging and post feeds.</p>
+                            <div class="tags"><span>MERN</span><span>Socket.io</span><span>Redux</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card show-on-scroll" data-category="dashboard">
+                        <div class="project-img">
+                            <img src="assets/salespro-crm-v2.jpg" alt="CRM Dashboard" class="img-placeholder"
+                                style="object-fit: contain; background: #0f172a;">
+                        </div>
+                        <div class="project-info">
+                            <h3>SalesPro CRM</h3>
+                            <p>Customer relationship management system with pipeline tracking.</p>
+                            <div class="tags"><span>Vue.js</span><span>Laravel</span><span>MySQL</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-card show-on-scroll" data-category="landing-page">
+                        <div class="project-img">
+                            <img src="assets/creative-agency.jpg" alt="Agency Portfolio" class="img-placeholder"
+                                style="object-fit: contain; background: #0f172a;">
+                        </div>
+                        <div class="project-info">
+                            <h3>Creative Agency Site</h3>
+                            <p>Minimalist portfolio website for a digital creative agency.</p>
+                            <div class="tags"><span>Next.js</span><span>GSAP</span><span>Sanity CMS</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 7 -->
+                    <div class="project-card show-on-scroll" data-category="web-app">
+                        <div class="project-img">
+                            <img src="assets/taskflow-manager.jpg" alt="Task Manager" class="img-placeholder"
+                                style="object-fit: contain; background: #0f172a;">
+                        </div>
+                        <div class="project-info">
+                            <h3>TaskFlow Manager</h3>
+                            <p>Productivity app for managing tasks and team collaboration.</p>
+                            <div class="tags"><span>React</span><span>Firebase</span><span>Material-UI</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 8 -->
+                    <div class="project-card show-on-scroll" data-category="ecommerce">
+                        <div class="project-img">
+                            <img src="assets/fashionhub-store.jpg" alt="Fashion Store" class="img-placeholder"
+                                style="object-fit: contain; background: #0f172a;">
+                        </div>
+                        <div class="project-info">
+                            <h3>FashionHub Store</h3>
+                            <p>Modern fashion e-commerce with product filters and wishlist.</p>
+                            <div class="tags"><span>Shopify</span><span>Liquid</span><span>JavaScript</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 9 -->
+                    <div class="project-card show-on-scroll" data-category="web-app">
+                        <div class="project-img">
+                            <img src="assets/codepen-clone.jpg" alt="Code Editor" class="img-placeholder"
+                                style="object-fit: contain; background: #0f172a;">
+                        </div>
+                        <div class="project-info">
+                            <h3>CodePen Clone</h3>
+                            <p>Online code editor with live preview for HTML, CSS, and JS.</p>
+                            <div class="tags"><span>React</span><span>Monaco Editor</span><span>Node.js</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 10 -->
+                    <div class="project-card show-on-scroll" data-category="dashboard">
+                        <div class="project-img">
+                            <img src="assets/financetrack-dashboard.jpg" alt="Finance Dashboard" class="img-placeholder"
+                                style="object-fit: contain; background: #0f172a;">
+                        </div>
+                        <div class="project-info">
+                            <h3>FinanceTrack Dashboard</h3>
+                            <p>Personal finance tracker with expense categorization.</p>
+                            <div class="tags"><span>Vue.js</span><span>Chart.js</span><span>Express</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 11 -->
+                    <div class="project-card show-on-scroll" data-category="landing-page">
+                        <div class="project-img">
+                            <img src="assets/techstart-landing.jpg" alt="Startup Landing" class="img-placeholder"
+                                style="object-fit: contain; background: #0f172a;">
+                        </div>
+                        <div class="project-info">
+                            <h3>TechStart Landing</h3>
+                            <p>Modern startup landing page with waitlist signup.</p>
+                            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 12 -->
+                    <div class="project-card show-on-scroll" data-category="web-app">
+                        <div class="project-img">
+                            <img src="assets/musicstream-player.jpg" alt="Music Player" class="img-placeholder"
+                                style="object-fit: contain; background: #0f172a;">
+                        </div>
+                        <div class="project-info">
+                            <h3>MusicStream Player</h3>
+                            <p>Music streaming app with playlists and visualization.</p>
+                            <div class="tags"><span>React</span><span>Web Audio API</span><span>Redux</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 13 -->
+                    <div class="project-card show-on-scroll" data-category="ecommerce">
+                        <div class="project-img">
+                            <img src="assets/foodexpress-delivery.jpg" alt="Food Delivery" class="img-placeholder"
+                                style="object-fit: contain; background: #0f172a;">
+                        </div>
+                        <div class="project-info">
+                            <h3>FoodExpress Delivery</h3>
+                            <p>Food delivery platform with real-time order tracking.</p>
+                            <div class="tags"><span>React Native</span><span>Node.js</span><span>MongoDB</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 14 -->
+                    <div class="project-card show-on-scroll" data-category="dashboard">
+                        <div class="project-img">
+                            <img src="assets/adminpro-dashboard.jpg" alt="Admin Panel" class="img-placeholder"
+                                style="object-fit: contain; background: #0f172a;">
+                        </div>
+                        <div class="project-info">
+                            <h3>AdminPro Dashboard</h3>
+                            <p>Comprehensive admin panel with system monitoring.</p>
+                            <div class="tags"><span>React</span><span>Ant Design</span><span>Node.js</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 15 -->
+                    <div class="project-card show-on-scroll" data-category="landing-page">
+                        <div class="project-img">
+                            <img src="assets/techconf-2024.jpg" alt="Conference Site" class="img-placeholder"
+                                style="object-fit: contain; background: #f0f4f8;">
+                        </div>
+                        <div class="project-info">
+                            <h3>TechConf 2024</h3>
+                            <p>Event landing page with schedule and ticket booking.</p>
+                            <div class="tags"><span>Next.js</span><span>Tailwind</span><span>Stripe</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 16 -->
+                    <div class="project-card show-on-scroll" data-category="web-app">
+                        <div class="project-img">
+                            <img src="assets/chatwave-messenger.jpg" alt="Chat App" class="img-placeholder"
+                                style="object-fit: contain; background: #0f172a;">
+                        </div>
+                        <div class="project-info">
+                            <h3>ChatWave Messenger</h3>
+                            <p>Real-time chat app with file sharing and emojis.</p>
+                            <div class="tags"><span>React</span><span>Socket.io</span><span>MongoDB</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 17 -->
+                    <div class="project-card show-on-scroll" data-category="ecommerce">
+                        <div class="project-img">
+                            <img src="assets/techmart-electronics.jpg" alt="Electronics Store" class="img-placeholder"
+                                style="object-fit: contain; background: #f0f9ff;">
+                        </div>
+                        <div class="project-info">
+                            <h3>TechMart Electronics</h3>
+                            <p>Electronics e-commerce with product reviews.</p>
+                            <div class="tags"><span>WooCommerce</span><span>PHP</span><span>MySQL</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 18 -->
+                    <div class="project-card show-on-scroll" data-category="dashboard">
+                        <div class="project-img">
+                            <img src="assets/projecthub-manager.jpg" alt="Project Management" class="img-placeholder"
+                                style="object-fit: contain; background: #0f172a;">
+                        </div>
+                        <div class="project-info">
+                            <h3>ProjectHub Manager</h3>
+                            <p>Project management tool with kanban boards.</p>
+                            <div class="tags"><span>React</span><span>DnD Kit</span><span>PostgreSQL</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 19 -->
+                    <div class="project-card show-on-scroll" data-category="landing-page">
+                        <div class="project-img">
+                            <img src="assets/fitlife-gym.jpg" alt="Fitness Landing" class="img-placeholder"
+                                style="object-fit: contain; background: #f0f4f8;">
+                        </div>
+                        <div class="project-info">
+                            <h3>FitLife Gym Landing</h3>
+                            <p>Fitness center website with class schedules.</p>
+                            <div class="tags"><span>HTML</span><span>Sass</span><span>JavaScript</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 21 -->
+                    <div class="project-card show-on-scroll" data-category="ecommerce">
+                        <div class="project-img">
+                            <img src="assets/bookhaven-store.jpg" alt="Book Store" class="img-placeholder"
+                                style="object-fit: contain; background: #fffcf0;">
+                        </div>
+                        <div class="project-info">
+                            <h3>BookHaven Store</h3>
+                            <p>Online bookstore with advanced search and reviews.</p>
+                            <div class="tags"><span>React</span><span>Express</span><span>MongoDB</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 22 -->
+                    <div class="project-card show-on-scroll" data-category="dashboard">
+                        <div class="project-img">
+                            <img src="assets/stockpro.jpg" alt="Inventory System" class="img-placeholder">
+                        </div>
+                        <div class="project-info">
+                            <h3>StockPro Inventory</h3>
+                            <p>Inventory management system with barcode scanning.</p>
+                            <div class="tags"><span>Vue.js</span><span>Laravel</span><span>MySQL</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 23 -->
+                    <div class="project-card show-on-scroll" data-category="landing-page">
+                        <div class="project-img">
+                            <img src="assets/dreamhome.jpg" alt="Real Estate" class="img-placeholder">
+                        </div>
+                        <div class="project-info">
+                            <h3>DreamHome Realty</h3>
+                            <p>Real estate listing website with virtual tours.</p>
+                            <div class="tags"><span>Next.js</span><span>Mapbox</span><span>Sanity</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 24 -->
+                    <div class="project-card show-on-scroll" data-category="web-app">
+                        <div class="project-img">
+                            <img src="assets/streamtube.jpg" alt="Video Platform" class="img-placeholder">
+                        </div>
+                        <div class="project-info">
+                            <h3>StreamTube Platform</h3>
+                            <p>Video sharing platform with upload and streaming.</p>
+                            <div class="tags"><span>React</span><span>Node.js</span><span>AWS S3</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 25 -->
+                    <div class="project-card show-on-scroll" data-category="dashboard">
+                        <div class="project-img">
+                            <img src="assets/peoplehub.jpg" alt="HR Dashboard" class="img-placeholder">
+                        </div>
+                        <div class="project-info">
+                            <h3>PeopleHub HR System</h3>
+                            <p>HR management with employee records and payroll.</p>
+                            <div class="tags"><span>Angular</span><span>Spring Boot</span><span>PostgreSQL</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 26 -->
+                    <div class="project-card show-on-scroll" data-category="ecommerce">
+                        <div class="project-img">
+                            <img src="assets/audiopro.jpg" alt="Headphone Store" class="img-placeholder">
+                        </div>
+                        <div class="project-info">
+                            <h3>AudioPro Store</h3>
+                            <p>Audio equipment store with 3D previews.</p>
+                            <div class="tags"><span>React</span><span>Three.js</span><span>Stripe</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 27 -->
+                    <div class="project-card show-on-scroll" data-category="landing-page">
+                        <div class="project-img">
+                            <img src="assets/mobileapp.jpg" alt="App Landing" class="img-placeholder">
+                        </div>
+                        <div class="project-info">
+                            <h3>MobileApp Showcase</h3>
+                            <p>Mobile app landing page with feature highlights.</p>
+                            <div class="tags"><span>HTML</span><span>CSS</span><span>AOS</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 28 -->
+                    <div class="project-card show-on-scroll" data-category="web-app">
+                        <div class="project-img">
+                            <img src="assets/notekeeper.jpg" alt="Note Taking" class="img-placeholder">
+                        </div>
+                        <div class="project-info">
+                            <h3>NoteKeeper App</h3>
+                            <p>Note-taking app with rich text editor and tags.</p>
+                            <div class="tags"><span>React</span><span>Quill</span><span>Firebase</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 29 -->
+                    <div class="project-card show-on-scroll" data-category="dashboard">
+                        <div class="project-img">
+                            <img src="assets/salesmetrics.jpg" alt="Sales Dashboard" class="img-placeholder">
+                        </div>
+                        <div class="project-info">
+                            <h3>SalesMetrics Dashboard</h3>
+                            <p>Sales tracking with forecasting and leaderboards.</p>
+                            <div class="tags"><span>React</span><span>Recharts</span><span>Node.js</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 30 -->
+                    <div class="project-card show-on-scroll" data-category="ecommerce">
+                        <div class="project-img">
+                            <img src="assets/luxwatch.jpg" alt="Watch Store" class="img-placeholder">
+                        </div>
+                        <div class="project-info">
+                            <h3>LuxWatch Store</h3>
+                            <p>Luxury watch e-commerce with AR try-on.</p>
+                            <div class="tags"><span>Next.js</span><span>AR.js</span><span>Stripe</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 31 -->
+                    <div class="project-card show-on-scroll" data-category="web-app">
+                        <div class="project-img">
+                            <img src="assets/weathernow.jpg" alt="Weather App" class="img-placeholder">
+                        </div>
+                        <div class="project-info">
+                            <h3>WeatherNow App</h3>
+                            <p>Real-time weather forecast app with maps.</p>
+                            <div class="tags"><span>React</span><span>OpenWeather API</span><span>Mapbox</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 32 -->
+                    <div class="project-card show-on-scroll" data-category="landing-page">
+                        <div class="project-img">
+                            <img src="assets/cryptovault.jpg" alt="Crypto Landing" class="img-placeholder">
+                        </div>
+                        <div class="project-info">
+                            <h3>CryptoVault Landing</h3>
+                            <p>Crypto wallet landing page with security showcase.</p>
+                            <div class="tags"><span>Next.js</span><span>Tailwind</span><span>Web3</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 33 -->
+                    <div class="project-card show-on-scroll" data-category="dashboard">
+                        <div class="project-img">
+                            <img src="assets/mailflow.jpg" alt="Email Dashboard" class="img-placeholder">
+                        </div>
+                        <div class="project-info">
+                            <h3>MailFlow Dashboard</h3>
+                            <p>Email marketing platform with automation.</p>
+                            <div class="tags"><span>Vue.js</span><span>Node.js</span><span>SendGrid</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 34 -->
+                    <div class="project-card show-on-scroll" data-category="web-app">
+                        <div class="project-img">
+                            <img src="assets/recipebox.jpg" alt="Recipe App" class="img-placeholder">
+                        </div>
+                        <div class="project-info">
+                            <h3>RecipeBox App</h3>
+                            <p>Recipe sharing platform with meal planning.</p>
+                            <div class="tags"><span>React</span><span>Firebase</span><span>Algolia</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Project 35 -->
+                    <div class="project-card show-on-scroll" data-category="ecommerce">
+                        <div class="project-img">
+                            <img src="assets/glowbeauty.jpg" alt="Cosmetics Store" class="img-placeholder">
+                        </div>
+                        <div class="project-info">
+                            <h3>GlowBeauty Store</h3>
+                            <p>Cosmetics e-commerce with virtual try-on.</p>
+                            <div class="tags"><span>React</span><span>TensorFlow.js</span><span>Stripe</span></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <a href="https://wa.me/03165475717" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Fazal - Web Developer</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Fazal Dev</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="skills.html" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link active nav-btn">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container main-wrapper">
+        <section id="contact" class="section" style="margin-bottom: 4rem;">
+            <div class="container">
+                <div class="section-header center">
+                    <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+                    <p class="section-subtitle">Let's work together</p>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>fazalrehman2008.work@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+92 316 5475717</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Remote / Worldwide</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <h4>Availability</h4>
+                                <p>Open for Freelance</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-language"></i>
+                            <div>
+                                <h4>Languages</h4>
+                                <p>English, Urdu</p>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <form class="contact-form" action="https://formsubmit.co/fazalrehman2008.work@gmail.com"
+                        method="POST">
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_subject" value="New submission from Portfolio Contact Form">
+                        <input type="hidden" name="_captcha" value="false">
+
+                        <div class="form-group"><input type="text" name="name" placeholder="Name" required></div>
+                        <div class="form-group"><input type="email" name="email" placeholder="Email" required></div>
+                        <div class="form-group"><input type="text" name="subject" placeholder="Subject" required></div>
+                        <div class="form-group">
+                            <select name="service" required>
+                                <option value="" disabled selected>Select Service</option>
+                                <option value="Web Development">Web Development</option>
+                                <option value="UI/UX Design">UI/UX Design</option>
+                                <option value="E-Commerce">E-Commerce</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group"><textarea name="message" placeholder="Message" rows="5"
+                                required></textarea></div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="section bg-alt" style="margin-bottom: 4rem; border-radius: 16px;">
+            <div class="container">
+                <div class="section-header center">
+                    <h2 class="section-title">Client <span class="accent">Stories</span></h2>
+                    <p class="section-subtitle">What people say about my work</p>
+                </div>
+                <div class="testimonials-slider">
+                    <div class="testimonial-card">
+                        <p>"One of the best developers I've worked with. The attention to detail and animations are
+                            top-notch!"</p>
+                        <div class="client-info">
+                            <h4>Sarah Johnson</h4><span>CEO, StartUp X</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Delivered the project on time and exceeded our expectations. Highly recommended for any web
+                            project."</p>
+                        <div class="client-info">
+                            <h4>David Lee</h4><span>Product Manager</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Amazing communication and technical skills. Our website is now faster and looks incredibly
+                            modern."</p>
+                        <div class="client-info">
+                            <h4>Emily Chen</h4><span>Marketing Director</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2024 Dev.Portfolio. All rights reserved.</p>
+            <p>Designed & Built by a Professional Web Developer.</p>
+            <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/03165475717" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
