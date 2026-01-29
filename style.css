@@ -1198,6 +1198,10 @@ footer {
 
     .hero-btns {
         justify-content: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 0.8rem;
     }
 
     .hero-img-wrapper {
@@ -1377,14 +1381,12 @@ footer {
     }
 
     .btn {
-        padding: 0.8rem 1.5rem;
-        /* Increased size */
-        font-size: 1rem;
-        /* Increased size */
-        width: 100%;
-        /* Ensure full width for better tap targets on mobile */
-        max-width: 300px;
-        margin: 0.5rem auto;
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+        width: auto;
+        min-width: 140px;
+        justify-content: center;
+        margin: 0;
     }
 
     .scroll-down {
